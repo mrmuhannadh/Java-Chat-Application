@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-May-2022 08:37:19 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.Chatgroups" table="chatgroups" catalog="groupchat" optimistic-lock="version">
+        <id name="chatId" type="java.lang.Integer">
+            <column name="chat_id" />
+            <generator class="identity" />
+        </id>
+        <property name="groupName" type="string">
+            <column name="group_name" length="500" not-null="true" />
+        </property>
+        <property name="hostId" type="int">
+            <column name="hostID" not-null="true" />
+        </property>
+        <property name="status" type="int">
+            <column name="status" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
